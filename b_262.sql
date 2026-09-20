@@ -1,7 +1,7 @@
---------------------------
+------------------------------------------------------------
 -- 262.  Trips and Users
--- https://leetcode.com/problems/trips-and-users/description/
---------------------------
+-- https://leetcode.com/problems/trips-and-users/description
+------------------------------------------------------------
 
 WITH not_banned_users AS (
     SELECT users_id
