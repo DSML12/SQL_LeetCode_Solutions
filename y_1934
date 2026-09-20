@@ -1,0 +1,17 @@
+--------------------------------------------------------------
+-- 1934. Confirmation Rate
+-- https://leetcode.com/problems/confirmation-rate/description
+--------------------------------------------------------------
+
+With temp As (
+    Select user_id, 
+      Round( Avg(Case When action = 'confirmed' Then 1 Else 0 End), 2) As confirmation_rate_temp
+    From Confirmations
+    Group By user_id
+)
+
+Select s.user_id, 
+  Ifnull(confirmation_rate_temp, 0) As confirmation_rate
+From Signups s 
+Left Join 
+temp t On s.user_id = t.user_id;
