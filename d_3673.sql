@@ -1,7 +1,7 @@
--------------------------------------------------------------------
+-----------------------------------------------------------------
 -- 3673. Find Zombie Sessions
--- https://leetcode.com/problems/find-zombie-sessions/description/
--------------------------------------------------------------------
+-- https://leetcode.com/problems/find-zombie-sessions/description
+-----------------------------------------------------------------
 
 With duration As(
     Select session_id, 
