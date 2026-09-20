@@ -5,6 +5,7 @@
 
 Select IfnUll(max(salary),null) as SecondHighestSalary
 From
-    (Select salary, Dense_Rank() Over(Order by salary DESC) as rnk
+    (Select salary, 
+        Dense_Rank() Over(Order by salary DESC) as rnk
     From Employee) sub  
 where rnk=2
