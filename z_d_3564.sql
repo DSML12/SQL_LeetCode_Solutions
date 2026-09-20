@@ -21,7 +21,8 @@ With CTE AS (
         From sales sa
         Left Join products p
         on sa.product_id = p.product_id) s
-Group by season, category)
+  Group by season, category
+)
 
 Select season, 
   category, 
