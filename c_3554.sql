@@ -1,7 +1,7 @@
---------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- 3554. Find Category Recommendation Pairs
--- https://leetcode.com/problems/find-category-recommendation-pairs/description/
---------------------------------------------------------------------------------
+-- https://leetcode.com/problems/find-category-recommendation-pairs/description
+-------------------------------------------------------------------------------
 
 With users_both As(
     Select i.product_id, 
