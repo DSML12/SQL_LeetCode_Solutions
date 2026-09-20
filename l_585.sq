@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+-- 585. Investments in 2016
+-- https://leetcode.com/problems/investments-in-2016/description
+----------------------------------------------------------------
+
+With cte As(
+    Select pid
+    From Insurance
+    Group by Concat(lat, ',', lon)
+    Having Count(*) = 1  
+) 
+
+Select Round(sum(tiv_2016), 2) as 'tiv_2016'
+From Insurance
+Where pid in (Select pid From cte)
+  AND tiv_2015 in (Select tiv_2015 
+                  From Insurance
+                  Group by tiv_2015 
+                  Having Count(*)>1);
