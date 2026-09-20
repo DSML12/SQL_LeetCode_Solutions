@@ -13,5 +13,5 @@ With temp As (
 Select s.user_id, 
   Ifnull(confirmation_rate_temp, 0) As confirmation_rate
 From Signups s 
-Left Join 
-temp t On s.user_id = t.user_id;
+Left Join  temp t 
+on s.user_id = t.user_id;
